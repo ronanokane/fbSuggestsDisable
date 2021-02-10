@@ -31,7 +31,7 @@ window.addEventListener('load', (event) => {
        }, 500);
 
        // get us out if no new news items
-       setTimeout(()=>{clearInterval(x);},80000);
+       setTimeout(()=>{clearInterval(x);},8000);
      }
   });
 });
