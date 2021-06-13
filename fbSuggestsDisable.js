@@ -8,7 +8,6 @@
 
 window.addEventListener('load', (event) => {
   var timeElapsed=0, feedsLocation,
-      
 	x=setInterval(()=> {
     
     if((timeElapsed+=200)>=5000){clearInterval(x); return;}
@@ -27,12 +26,7 @@ window.addEventListener('load', (event) => {
         });
 
         mutationObserver.observe(feedsLocation, {
-          attributes: false,
-          characterData: false,
-          childList: true,
-          subtree: true,
-          attributeOldValue: false,
-          characterDataOldValue: false
+          childList: true
         });        
     } 
   }, 200);        
