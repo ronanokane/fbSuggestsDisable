@@ -17,14 +17,12 @@ window.addEventListener('load', (event) => {
         console.log("suggestions disabler on....");
       	clearInterval(x);
         
-        var mutationObserver = new MutationObserver((mutations)=> {
-          mutations.forEach((mutation)=> {
-            mutation.addedNodes.length>0 && mutation.addedNodes[0].attributes?.getNamedItem("data-pagelet")
+        var mutationObserver = new MutationObserver((mutations)=>
+          mutations.forEach((mutation)=> mutation.addedNodes.length>0 && mutation.addedNodes[0].attributes?.getNamedItem("data-pagelet")
   							&& document.evaluate("./div/div/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div/div//span[starts-with(text(),'Sugge')]", mutation.addedNodes[0], null, XPathResult.ANY_TYPE).iterateNext() 
     						&& (mutation.addedNodes[0].style.display='none') 
-    						&& console.log("suggest removed");
-          });
-        });
+    						&& console.log("suggest removed"))
+        );
 
         mutationObserver.observe(feedsLocation, {
           childList: true
