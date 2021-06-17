@@ -7,11 +7,12 @@
 // ==/UserScript==
 
 window.addEventListener('load', (event) => {
-  var timeElapsed=0, feedsLocation,
-      
-	x=setInterval(()=> {
+  var timeElapsed=0, feedsLocation, x=setInterval(()=> {
     
-    if((timeElapsed+=200)>=5000){clearInterval(x); return;}
+    if((timeElapsed+=200)>=5000){
+      clearInterval(x); 
+      return;
+    }
     
     if((feedsLocation=document.evaluate("/html/body/div[1]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[4]/div" ,document, null, XPathResult.ANY, null ).iterateNext())){
         console.log("suggestions disabler on....");
