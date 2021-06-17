@@ -8,7 +8,6 @@
 
 window.addEventListener('load', (event) => {
   var timeElapsed=0, feedsLocation, x=setInterval(()=> {
-    
     if((timeElapsed+=200)>=5000){
         clearInterval(x); 
         return;
