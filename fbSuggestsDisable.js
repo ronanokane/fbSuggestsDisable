@@ -9,8 +9,8 @@
 window.addEventListener('load', (event) => {
   var timeElapsed=0, feedsLocation, x=setInterval(()=> {
     if((timeElapsed+=200)>=5000){
-      clearInterval(x); 
-      return;
+        clearInterval(x); 
+        return;
     }
     
     if((feedsLocation=document.evaluate("/html/body/div[1]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[4]/div" ,document, null, XPathResult.ANY, null ).iterateNext())){
@@ -23,7 +23,6 @@ window.addEventListener('load', (event) => {
               && (mutation.addedNodes[0].style.display='none') 
               && console.log("suggest removed"))
         );
-
         mutationObserver.observe(feedsLocation, {
           childList: true
         });        
