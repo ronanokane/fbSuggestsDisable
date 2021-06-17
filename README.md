@@ -1,1 +1,1 @@
-A method to banish the dreaded suggestions that plague the feeds window.
+A method to banish the dreaded suggestions that plague the Facebook feeds window.
