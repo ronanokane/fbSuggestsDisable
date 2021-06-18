@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Facebook_suggestions_disabler v1.2
+// @name        fbSuggestsDisable
 // @description	Remove the annoying facebook suggestions
 // @author      Ronan O' Kane
 // @include     https://www.facebook.com/
