@@ -12,7 +12,7 @@ window.addEventListener('load', (event) => {
         clearInterval(x); 
         return;
     }
-    if((feedsLocation=document.evaluate("/html/body/div[1]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/div[3]/div/div[4]/div" ,document, null, XPathResult.ANY, null ).iterateNext())){
+    if((feedsLocation=document.querySelector('div[role="feed"]'))){
         console.log("suggestions disabler on....");
       	clearInterval(x);
         
