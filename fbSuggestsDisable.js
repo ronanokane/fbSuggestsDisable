@@ -3,10 +3,10 @@
 // @description	Remove the annoying facebook suggestions
 // @author      Ronan O' Kane
 // @include     https://www.facebook.com/
+// @run-at document-end
 // @version     v1.2
 // ==/UserScript==
 
-window.addEventListener('load', (event) => {
   var timeElapsed=0, feedsLocation, x=setInterval(()=> {
     if((timeElapsed+=200)>=5000){
         clearInterval(x); 
@@ -27,4 +27,3 @@ window.addEventListener('load', (event) => {
         });        
     } 
   }, 200);        
-});
