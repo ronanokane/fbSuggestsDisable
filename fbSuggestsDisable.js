@@ -9,7 +9,6 @@
 
 new MutationObserver(function(mutat) {
 	let feedsLocation=document.querySelector('div[role="feed"]');
-	
 	if(feedsLocation){
 		this.disconnect();
 		console.log("suggestions disabler on....");
