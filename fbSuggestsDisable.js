@@ -13,8 +13,8 @@ new MutationObserver(function(mutat) {
 		this.disconnect();
 		console.log("suggestions disabler on....");
 		new MutationObserver((mutations)=>
-		    mutations.forEach((mutation)=> mutation.addedNodes.length>0 && mutation.addedNodes[0].attributes?.getNamedItem("data-pagelet")
-			    && document.evaluate("./div/div/div/div/div/div/div/div/div/div/div/div/div/div/div//span[starts-with(text(),'Sugge')]", mutation.addedNodes[0], null, XPathResult.ANY_TYPE).iterateNext() 
+		    mutations.forEach((mutation)=> mutation.addedNodes.length>0
+			    && document.evaluate(".//span[starts-with(text(),'Sugge')]", mutation.addedNodes[0], null, XPathResult.ANY_TYPE).iterateNext()
 			    && (mutation.addedNodes[0].style.display='none') 
 			    && console.log("suggest removed"))
 		).observe(feedsLocation, { childList: true });        
