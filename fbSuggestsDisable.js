@@ -9,7 +9,7 @@
 
 let feedsLocation=document.evaluate('//div[./span/@id="ssrb_feed_start"]/div[1]/div[1]',document, null, XPathResult.ANY_TYPE).iterateNext();
 if(!feedsLocation){
-    alert('Html Structure changed... update fbSuggestsDisable script');
+    alert('Html Structure changed... update fbSuggestsDisable');
     return;
 }
 console.log("suggestions disabler on....");
