@@ -14,8 +14,12 @@ if(!feedsLocation){
 }
 console.log("suggestions disabler on....");
 
+// wipe initial suggestions
+feedsLocation.childNodes.forEach((item)=> document.evaluate(".//span[starts-with(text(),'Suggested')]", item, null, XPathResult.ANY_TYPE).iterateNext()
+    && (item.style.display='none'));
+
+// wipe dynamicaly added suggestions
 new MutationObserver((mutations)=>mutations.forEach((mutation)=> mutation.addedNodes.length>0
     && document.evaluate(".//span[starts-with(text(),'Suggested')]", mutation.addedNodes[0], null, XPathResult.ANY_TYPE).iterateNext()
-    && (mutation.addedNodes[0].style.display='none')
-    && console.log("suggest removed"))
+    && (mutation.addedNodes[0].style.display='none'))
 ).observe(feedsLocation, { childList: true });
